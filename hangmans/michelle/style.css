@@ -1,0 +1,50 @@
+#buttons span{
+  padding: 5px;
+  border: 1px solid black;
+  background-color: purple;
+  margin-right: 5px;
+}
+#buttons {
+  margin-top: 30px;
+  color: pink;
+}
+#header{
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  align-items: center;
+}
+
+.active {
+  background: yellow;
+}
+
+#reset {
+  background-color: ;
+  border: none;
+  color: purple;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+#hold {
+  margin: 20px;
+}
+
+#hold span {
+  padding: 5px;
+}
+body{
+    background: linear-gradient(to top, #ffff99 0%, #ff99cc 100%) fixed;
+}
+
+/* TASKS: 
+1. Center the game - make sure that when resizing the window, the game stays in center.
+2. Add background color.
+3. Add gaps and color to letters.
+4. Add design to the play again button.
+5. Add costume google font.
+*/
