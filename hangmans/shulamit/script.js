@@ -85,7 +85,6 @@ const addWordLines = () => {
     correct.appendChild(guess);
   }
 }
-  
  
   
   const chooseWord = () => {
@@ -107,10 +106,9 @@ const addWordLines = () => {
   }
  
   const playAgain = () => {
+    lettersUserGuessed = 0;
     chooseWord();
     addButtons();
     addWordLines();
   }
   
-// Homework: 
-// reset lettersUserGuessed every time user clicks play again
