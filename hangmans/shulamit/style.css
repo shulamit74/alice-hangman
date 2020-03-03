@@ -1,0 +1,25 @@
+#buttons span{
+    padding: 5px;
+    border: 1px solid black
+  }
+  #buttons {
+    margin-top: 20px;
+  }
+  #header{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    align-items: center;
+  }
+  
+  .active {
+    background: yellow;
+  }
+  
+  #hold {
+    margin: 20px;
+  }
+  
+  #hold span {
+    padding: 5px;
+  }
