@@ -1,0 +1,45 @@
+body {
+  background-color: yellow;
+}
+
+#buttons span{
+  padding: 5px;
+  border: 1px solid black
+}
+
+#buttons {
+  margin-top: 20px;
+}
+
+#header{
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  align-items: center;
+  color: blue;
+  font-family: 'Concert One',   cursive
+}
+
+.active {
+  background: yellow;
+}
+
+#hold {
+  margin: 20px;
+}
+
+#hold span {
+  padding: 5px;
+}
+
+#reset {
+  border-radius: 12px;
+  background-color: yellow;
+  color: blue;
+  border: 2px solid blue;
+  font-family: 'Concert One',   cursive
+}
+
+#img {
+  margin-top: 0px;
+}

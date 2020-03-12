@@ -1,0 +1,78 @@
+#buttons span{
+  padding: 5px;
+  border: 1px solid black;
+ 
+  
+}
+#buttons {
+  margin-top: 30px;
+  font-family: 'Indie Flower', cursive;
+   max-width: 500px;
+  margin: auto;
+ 
+
+  
+  
+}
+#header{
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  align-items: center;
+   max-width: 500px;
+  margin: auto;
+}
+
+.active {
+  background: yellow;
+   max-width: 500px;
+}
+
+#hold {
+   max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+#hold span {
+  padding: 5px;
+  background-color: aqua;
+  
+}
+
+#header{
+  background-color: pink;
+  font-family: 'Anton', sans-serif;
+}
+
+#category{
+  background-color: lightblue;
+  font-family: 'Indie Flower', cursive;
+}
+
+
+#reset{
+  background-color: red;
+ margin: auto; 
+ display: block;
+ text-align: -webkit-center;
+  padding:2px;
+  
+  
+}
+
+#mylives{
+  text-align: -webkit-center;
+  background:khaki
+  
+}
+
+#button-container{
+
+    margin-top: 30px;
+   
+}
+#buttons{
+  margin-top: 10px;
+  
+}
