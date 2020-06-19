@@ -2,6 +2,8 @@ body {
     background: rgb(16,34,139);
     background: linear-gradient(0deg, rgba(16,34,139,1) 0%, rgba(58,58,179,1) 35%, rgba(115,98,205,1) 100%) fixed;
     font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 .container {
     display: flex;
@@ -10,29 +12,37 @@ body {
     justify-content: center;
     align-items: center;
 }
-.games {
+.header {
     display: flex;
-    padding: 20px;
-    min-height: 300px;
-    width: 800px;
-    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
-    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    padding-top: 20px;
 }
-.game {
-    width: 150px;
-    height: 100px;
-    background-color: cornflowerblue;
-    margin: 10px;
+.header img {
+    margin-right: 10px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 30px;
+    width: 300px;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-    color: white;
 }
-.game:hover {
-    background-color: #82c1e0;
+.link:hover {
+    background-color: rgba(245, 220, 77, 0.7);
 }
+.link img {
+    margin-right: 10px;
+}
+
 .rights {
     color: white;
     font-size: 11px;

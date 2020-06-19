@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="../../game-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="../index.html" class="home">BACK</a>
+    <div id="try"></div>
+    <div class="container">
+      <button class="generate" onclick="generateBoard()">Generate board</button>
+
+      <div class="big-board"></div>
+
+      <button id="button" onclick="check()">CHECK</button>
+      <div id="timer-container">
+        <div id="row">
+          <div id="timer"></div>
+          SECONDS
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
