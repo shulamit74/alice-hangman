@@ -1,0 +1,133 @@
+body {
+  background-image: url("https://wallpaperaccess.com/full/2641047.gif");
+}
+#img1{ 
+  opacity: 1;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  width: 100%;
+
+}
+.soduko-board {
+  border: 3px solid #8A2BE2;
+  margin: auto;
+}
+.big-board {
+  width: 560px;
+  display: flex;
+  align-items:center;
+  flex-wrap: wrap;
+}
+.square{
+  width:60px;
+  height:60px;
+  border:1px solid #4B0082;
+  background-color: #FFF5EE;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.square input {
+  width: 20px;
+  height: 20px;
+  background-color: #FFF5EE;
+  border: 0px;
+}
+.soduko-board {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-auto-rows: 60px;
+  margin-bottom: 0px;
+}
+
+input {
+  font-size: 20px;
+  border: 0px;
+  width: 20px;
+  background-color: rgba(0,0,0,0);
+  display:inline-block;
+  text-align:center;
+}
+
+#button {
+ display: block;
+  margin-top: 10px;
+  width: 100px;
+  padding: 10px;
+  background-color: #9370DB;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family:'Liu Jian Mao Cao', cursive;
+}
+
+.generate{
+  display 
+  margin-left: 585px;
+  margin-bottom: 10px;
+  background-color: #9932CC;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family:'Liu Jian Mao Cao', cursive;
+}
+
+
+
+#timer-container {
+  display: flex;
+  width: 510px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  font-size: 15px;
+  font-weight: bold;
+  font-family:'Liu Jian Mao Cao', cursive;
+  
+}
+#timer {
+  border: 2px solid #4B0082;
+  height: 50px;
+  width: 200px;
+  font-size: 25px;
+  display: flex;
+  margin-left: 4px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  background-color: #FFF5EE;
+}
+#buttons, #row {
+  display: flex;
+  width: 150px;
+  flex-direction: row;
+  align-items: center;
+  background-color:#FFF5EE;
+  color:black;
+}
+#start {
+  padding: 15px;
+  width: 95px;
+  margin-right: 15px;
+  background-color: #9932CC;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family:'Liu Jian Mao Cao', cursive;
+}
+
+#end{
+  padding: 15px;
+  width: 95px;
+  margin-right: 15px;
+  background-color: #9932CC;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family:'Liu Jian Mao Cao', cursive;
+}
