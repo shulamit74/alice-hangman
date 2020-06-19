@@ -13,19 +13,31 @@
   </head>
   <body>
     <a href="../index.html" class="home">BACK</a>
-    <div id="try"></div>
     <div class="container">
-      <button class="generate" onclick="generateBoard()">Generate board</button>
-
-      <div class="big-board"></div>
-
-      <button id="button" onclick="check()">CHECK</button>
-      <div id="timer-container">
+      <h1>Sudoku</h1>
+      <h2>
+        •Click on "generateBoard" to see the board <br />
+        •Click on check if you want to see if your answer is right.<br />
+      </h2>
+      <br />
+      <div id="container">
         <div id="row">
           <div id="timer"></div>
           SECONDS
         </div>
+        <button id="generate" onclick="generateBoard()">Generate board</button>
+
+        <br />
+        <br />
+
+        <div id="buttons"></div>
+        <br />
       </div>
+      <div class="big-board"></div>
+      <br />
+      <div id="dot">.</div>
+      <br />
+      <button id="button" onclick="check()">CHECK</button>
     </div>
 
     <script src="script.js"></script>

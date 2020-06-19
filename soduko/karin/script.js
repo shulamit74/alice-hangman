@@ -1,28 +1,29 @@
-function createElements(){
+function createElements() {
   var bigBoard = document.getElementsByClassName("big-board")[0];
- 
-bigBoard.innerHTML = ""; // empty existing board;
 
-   for (i = 0; i < 9; i++) {  
-     var smallBoard = document.createElement("div"); // this is a small board
-     smallBoard.className = 'soduko-board';
-     smallBoard.id = "board-"+i;
+  bigBoard.innerHTML = ""; // empty existing board;
 
-     bigBoard.appendChild(smallBoard); 
-      for (j = 0; j < 9; j++) {  // generate cells for small board
-        var small = document.createElement("div");
-        var input = document.createElement("input");
-        small.className = 'square';
-        smallBoard.appendChild(small);
-        small.appendChild(input);
-      }
-   }
+  for (i = 0; i < 9; i++) {
+    var smallBoard = document.createElement("div"); // this is a small board
+    smallBoard.className = "soduko-board";
+    smallBoard.id = "board-" + i;
+
+    bigBoard.appendChild(smallBoard);
+    for (j = 0; j < 9; j++) {
+      // generate cells for small board
+      var small = document.createElement("div");
+      var input = document.createElement("input");
+      small.className = "square";
+      smallBoard.appendChild(small);
+      small.appendChild(input);
+    }
+  }
 }
 
 function check() {
   // check that all squares are correct
   let isAllLegal = true;
-  for (j = 0; j < 9; j++) { 
+  for (j = 0; j < 9; j++) {
     var cells = document.querySelectorAll("#board-" + j + " .square");
     console.log(cells);
     var finalArray = [];
@@ -40,13 +41,13 @@ function check() {
       }
     }
     const isSmallBoardLegal = isArrayLegal(finalArray);
-    if(isSmallBoardLegal === false){ 
+    if (isSmallBoardLegal === false) {
       // if one of the small boards is not legal - the whole game is not legal.
-      isAllLegal = false;  
+      isAllLegal = false;
     }
   }
-  // check that all columns are correct:
-   for (j = 0; j < 9; j++) {
+
+  for (j = 0; j < 9; j++) {
     var cells = document.querySelectorAll(".column-" + j + ".square"); // column-0, column-1
     var finalArray = [];
     var text;
@@ -78,22 +79,22 @@ function check() {
         finalArray.push(cell.innerHTML);
       }
     }
-    
-        const isSmallBoardLegal = isArrayLegal(finalArray);
+
+    const isSmallBoardLegal = isArrayLegal(finalArray);
     if (isSmallBoardLegal === false) {
       // if one of the small boards is not legal - the whole game is not legal.
       isAllLegal = false;
     }
   }
-    
-   if (isAllLegal) {
-      window.alert("You have won!");
-    } else window.alert("Try again");
+
+  if (isAllLegal) {
+    window.alert("You have won!");
+  } else window.alert("Try again");
   // check that all rows are correct
   //check that all columns are correct
 }
 
- function isArrayLegal(array) {
+function isArrayLegal(array) {
   let isArrayLegal = true;
   const arrayCopy = [];
   for (number of array) {
@@ -102,77 +103,71 @@ function check() {
     } else {
       isArrayLegal = false;
     }
-    if(number === ""){
+    if (number === "") {
       isArrayLegal = false;
     }
     arrayCopy.push(number);
   }
   return isArrayLegal;
-}  
- 
-  
-   
-function generateBoard(){
-  
+}
+
+function generateBoard() {
   createElements();
   startTimer();
-var bigSoduko = [
-    [6,2,8,7,9,4,3,1,5], // board-1 bigSoduko[1]
-    [1,3,4,8,6,5,7,2,9], // board-2 bigSoduko[2]
-    [7,5,9,3,1,2,8,6,4],
-    [1,3,6,4,5,9,8,7,2],
-    [4,7,2,8,3,1,5,9,6], 
-    [5,9,8,2,7,6,4,3,1],
-    [2,4,3,5,8,1,9,6,7],
-    [6,1,7,9,4,3,2,5,8], 
-    [9,8,5,6,2,7,1,4,3],
-  ]
+  var bigSoduko = [
+    [6, 2, 8, 7, 9, 4, 3, 1, 5], // board-1 bigSoduko[1]
+    [1, 3, 4, 8, 6, 5, 7, 2, 9], // board-2 bigSoduko[2]
+    [7, 5, 9, 3, 1, 2, 8, 6, 4],
+    [1, 3, 6, 4, 5, 9, 8, 7, 2],
+    [4, 7, 2, 8, 3, 1, 5, 9, 6],
+    [5, 9, 8, 2, 7, 6, 4, 3, 1],
+    [2, 4, 3, 5, 8, 1, 9, 6, 7],
+    [6, 1, 7, 9, 4, 3, 2, 5, 8],
+    [9, 8, 5, 6, 2, 7, 1, 4, 3],
+  ];
 
-
-  
-  for(j=0; j< 9; j++){ // j = 0,1,2
-    var cells = document.querySelectorAll("#board-"+j+" .square");
-    for (let i = 0; i < 9; i++) { 
-      cells[i].innerHTML = bigSoduko[j][i] // 0, 1, 2
+  for (j = 0; j < 9; j++) {
+    // j = 0,1,2
+    var cells = document.querySelectorAll("#board-" + j + " .square");
+    for (let i = 0; i < 9; i++) {
+      cells[i].innerHTML = bigSoduko[j][i]; // 0, 1, 2
     }
   }
-  
- 
+
   emptyCells();
- function emptyCells() {
-  for(i=0; i < 9; i++){
-    var smallBoardId = "board-"+i// "board-0, board-1...board-8";
-    var cells = document.querySelectorAll("#"+smallBoardId+" "+".square"); //#board-1 .square, #board-2 .square...
-    
-    let randomCellIndex;
-    let legalNumber;
-    let numberOptions = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-    for (let i = 0; i < 3; i++) {
-      randomCellIndex = Math.floor(numberOptions.length * Math.random()); 
-      legalNumber = numberOptions[randomCellIndex];
-      cells[legalNumber].innerHTML = "<input type='text' value=''  />";
+  function emptyCells() {
+    for (i = 0; i < 9; i++) {
+      var smallBoardId = "board-" + i; // "board-0, board-1...board-8";
+      var cells = document.querySelectorAll(
+        "#" + smallBoardId + " " + ".square"
+      ); //#board-1 .square, #board-2 .square...
+
+      let randomCellIndex;
+      let legalNumber;
+      let numberOptions = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+      for (let i = 0; i < 2; i++) {
+        randomCellIndex = Math.floor(numberOptions.length * Math.random());
+        legalNumber = numberOptions[randomCellIndex];
+        cells[legalNumber].innerHTML = "<input type='text' value=''  />";
+      }
     }
   }
 }
- 
-  
-  
-}
 
- function emptyAllCells() {
-  var cells= document.querySelectorAll(".square");
-  for(cell of cells) {
-   cell.style.backgroundColor = "antiquewhite";
-  }  
+function emptyAllCells() {
+  var cells = document.querySelectorAll(".square");
+  for (cell of cells) {
+    cell.style.backgroundColor = "antiquewhite";
+  }
   for (let i = 0; i < 9; i++) {
-    cells[i].innerHTML = "<input type ='text' value =''/>"
+    cells[i].innerHTML = "<input type ='text' value =''/>";
   }
 }
 
-let myInterval; 
+let myInterval;
 function startTimer() {
   let startTime = 0;
-  if(myInterval){
+  if (myInterval) {
     clearInterval(myInterval);
   }
   const timer = document.getElementById("timer");
@@ -181,9 +176,30 @@ function startTimer() {
     timer.innerHTML = startTime.toFixed(2);
   }, 100);
 }
- function endTimer(){
-   clearInterval(myInterval);
- }
+function endTimer() {
+  clearInterval(myInterval);
+}
 
-
-
+for (j = 0; j < 9; j++) {
+  var cells = document.querySelectorAll(".row-" + j + ".square"); // row-0, row-1, row-3...
+  console.log(cells);
+  var finalArray = [];
+  var text;
+  for (cell of cells) {
+    if (cell.querySelector("input") != null) {
+      text = cell.querySelector("input").value;
+      finalArray.push(text);
+    } else {
+      finalArray.push(cell.innerHTML);
+    }
+  }
+  const isSmallBoardLegal = isArrayLegal(finalArray);
+  if (isSmallBoardLegal === false) {
+    // if one of the small boards is not legal - the whole game is not legal.
+    isAllLegal = false;
+  }
+}
+if (isAllLegal) {
+  window.alert("You have won!");
+  endTimer();
+} else window.alert("Try again");
