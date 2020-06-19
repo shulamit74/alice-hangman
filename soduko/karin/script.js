@@ -147,7 +147,7 @@ var bigSoduko = [
     let randomCellIndex;
     let legalNumber;
     let numberOptions = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 3; i++) {
       randomCellIndex = Math.floor(numberOptions.length * Math.random()); 
       legalNumber = numberOptions[randomCellIndex];
       cells[legalNumber].innerHTML = "<input type='text' value=''  />";
