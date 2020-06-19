@@ -1,3 +1,6 @@
+body {
+  background-image: url("https://media0.giphy.com/media/g04lCCTUHSw03W7pqD/source.gif");
+}
 #img1{ 
   opacity: 1;
 }
@@ -8,7 +11,6 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-image: url("https://media0.giphy.com/media/g04lCCTUHSw03W7pqD/source.gif");
 }
 .soduko-board {
   border: 3px solid grey;
@@ -60,7 +62,6 @@ input {
 }
 
 .generate{
-  display 
   margin-left: 585px;
   margin-bottom: 10px;
   background-color: Gold ;
